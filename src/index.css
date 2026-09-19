@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+  --off-white: #f7f6f3;
+  --paper: #f0ede8;
+  --rule: #000000;
+  --rule-light: #e0ddd8;
+  --ink: #0a0a0a;
+  --ink2: #3a3a3a;
+  --ink3: #888888;
+  --ink4: #cccccc;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  width: 100%;
+  min-height: 100svh;
+  background: #ffffff;
+  color: #0a0a0a;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+body { cursor: none; }
+
+::selection { background: #0a0a0a; color: #ffffff; }
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+[data-swatch]:hover .swatch-border {
+  opacity: 0.3 !important;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+
+  .header-right-text {
+    display: none !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-left {
+    border-right: none !important;
+    border-bottom: 1px solid #000 !important;
+    padding: 48px 24px !important;
+  }
+  .hero-right {
+    padding: 48px 24px !important;
+  }
+  .info-strip {
+    grid-template-columns: 1fr !important;
+  }
+  .info-strip > div {
+    border-right: none !important;
+    border-bottom: 1px solid #000 !important;
+  }
+  .result-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .result-left {
+    border-right: none !important;
+    border-bottom: 1px solid #000 !important;
+    padding: 48px 24px !important;
+  }
+  .result-right {
+    padding: 48px 24px !important;
+  }
+  .download-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .download-right {
+    border-left: none !important;
+    border-top: 1px solid #000 !important;
+    padding: 48px 24px !important;
+  }
+  .choices-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .choices-grid > div:nth-child(4n) {
+    border-right: none !important;
+  }
+  .choices-grid > div:nth-child(n+5) {
+    margin-top: 24px;
+  }
+  header, .fixed-bar {
+    padding: 0 24px !important;
+  }
+  .share-card-wrapper {
+    max-width: calc(100vw - 48px) !important;
+  }
+}
